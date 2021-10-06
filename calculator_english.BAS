@@ -1,22 +1,27 @@
 0 CLS
 10 COLOR 2
 20 LOCATE 3, 32
-30 PRINT "welcome to the calculator"
+30 PRINT "benvingut a la carta"
 40 LOCATE 5, 32
-50 PRINT "sum................1"
+50 PRINT "suma...............1"
 60 LOCATE 6, 32
-70 PRINT "substraction.......2"
+70 PRINT "resta..............2"
 80 LOCATE 7, 32
-90 PRINT "multiplication.....3"
+90 PRINT "multiplicaci¢......3"
 100 LOCATE 8, 32
-110 PRINT "division..........4"
+110 PRINT "divisi¢............4"
 120 LOCATE 9, 32
-130 PRINT "SQR...............5"
+130 PRINT "arrel cuadrada.....5"
 131 LOCATE 10, 32
-132 PRINT "triangle..........6"
-140 LOCATE 12, 38
-150 PRINT "exit...7"
-160 INPUT "choose an option"; primermenu
+132 PRINT "triangle...........6"
+140 LOCATE 11, 32
+141 PRINT "hexagon............7"
+142 LOCATE 12, 32
+143 PRINT "fraccions..........8"
+149 LOCATE 14, 38
+150 PRINT "exit...9"
+151 LOCATE 17, 36
+160 INPUT "que vols fer"; primermenu
 170 IF primermenu = 1 THEN
 180 GOTO 400
 190 END IF
@@ -36,6 +41,12 @@
 303 GOTO 700
 310 END IF
 320 IF primermenu = 7 THEN
+321 GOTO 709
+322 END IF
+323 IF primermenu = 8 THEN
+324 GOTO 1000
+325 END IF
+326 IF primermenu = 9 THEN
 330 END
 340 END IF
 
@@ -119,3 +130,34 @@ LOCATE 6, 30
 INPUT "press any button"; z
 GOTO 0
 REM ****triangle****
+
+REM ****frac****
+1000 CLS
+1001 LOCATE 3, 30
+1002 INPUT "what's the numerator"; primerNUM
+LOCATE 4, 30
+1003 INPUT "what's the denominator"; primerDEN
+LOCATE 5, 30
+1004 INPUT "what's the second numerator"; segonNUM
+LOCATE 6, 30
+1005 INPUT "what's the second denominator"; segonDEN
+1006 dencomun = primerDEN * segonDEN
+1007 tercerNUM = segonDEN * primerNUM
+1008 quartNUM = segonNUM * primerDEN
+1009 NUMfinalS = tercerNUM + quartNUM
+NUMfinalR = tercerNUM - quartNUM
+NUMfinalM = primerNUM * segonNUM
+DENfinalM = primerDEN * segonDEN
+NUMfinalD = primerNUM * segonDEN
+DENfinalD = primerDEN * segonNUM
+LOCATE 8, 30
+1010 PRINT "the sum of"; tercerNUM; "/"; dencomun; "and"; quartNUM; "/"; dencomun; " ="; NUMfinalS; "/"; dencomun
+LOCATE 9, 30
+1011 PRINT "the subtraction"; tercerNUM; "/"; dencomun; "and"; quartNUM; "/"; dencomun; " ="; NUMfinalR; "/"; dencomun
+LOCATE 10, 30
+1012 PRINT "the multiplication of"; primerNUM; "/"; primerDEN; "and"; segonNUM; "/"; segonDEN; " ="; NUMfinalM; "/"; DENfinalM
+LOCATE 11, 30
+1013 PRINT "the division of"; primerNUM; "/"; primerDEN; "and"; segonNUM; "/"; segonDEN; "="; NUMfinalD; "/"; DENfinalD
+INPUT "press any button"; z
+GOTO 0
+REM ****frac****
