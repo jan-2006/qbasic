@@ -131,6 +131,24 @@ INPUT "press any button"; z
 GOTO 0
 REM ****triangle****
 
+REM ****hex****
+709 CLS
+LOCATE 3, 30
+900 INPUT "quin tamany te un costat"; primerHEX
+901 segonHEX = primerHEX * 6
+LOCATE 4, 30
+902 PRINT "el perimetre es"; segonHEX
+903 tercerHEX = primerHEX / 2
+904 quartHEX = primerHEX * primerHEX - tercerHEX * tercerHEX
+905 a = quartHEX
+906 b = SQR(a)
+907 quintHEX = (segonHEX * b) / 2
+LOCATE 5, 30
+908 PRINT "el area es"; quintHEX
+INPUT "clicka qualsevol tecla"; z
+GOTO 0
+REM ****hex****
+
 REM ****frac****
 1000 CLS
 1001 LOCATE 3, 30
