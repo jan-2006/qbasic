@@ -1,27 +1,27 @@
 0 CLS
 10 COLOR 2
 20 LOCATE 3, 32
-30 PRINT "benvingut a la carta"
+30 PRINT "welcome to the calculator"
 40 LOCATE 5, 32
-50 PRINT "suma...............1"
+50 PRINT "sum...............1"
 60 LOCATE 6, 32
-70 PRINT "resta..............2"
+70 PRINT "substraction......2"
 80 LOCATE 7, 32
-90 PRINT "multiplicaci¢......3"
+90 PRINT "multiplication....3"
 100 LOCATE 8, 32
-110 PRINT "divisi¢............4"
+110 PRINT "division.........4"
 120 LOCATE 9, 32
-130 PRINT "arrel cuadrada.....5"
+130 PRINT "SQR..............5"
 131 LOCATE 10, 32
-132 PRINT "triangle...........6"
+132 PRINT "triangle.........6"
 140 LOCATE 11, 32
-141 PRINT "hexagon............7"
+141 PRINT "hexagon..........7"
 142 LOCATE 12, 32
-143 PRINT "fraccions..........8"
+143 PRINT "fraction.........8"
 149 LOCATE 14, 38
 150 PRINT "exit...9"
 151 LOCATE 17, 36
-160 INPUT "que vols fer"; primermenu
+160 INPUT "what do you want to calculate"; primermenu
 170 IF primermenu = 1 THEN
 180 GOTO 400
 190 END IF
